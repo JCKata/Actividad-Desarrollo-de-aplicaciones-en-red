@@ -1,0 +1,225 @@
+:root {
+  --color-roca: #3d2f1f;
+  --color-piedra: #6b6357;
+  --color-arena: #f8f6f1;
+  --color-pino: #2f4f2f;
+  --color-pino-claro: #4a6b4a;
+  --color-naranja: #d97706;
+  --color-naranja-claro: #f59e0b;
+  --color-titulos: "Montserrat", sans-serif;
+  --color-cuerpo: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--color-cuerpo);
+  color: var(--color-roca);
+  background-color: var(--color-arena);
+  padding-top: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--color-titulos);
+  color: var(--color-roca);
+}
+
+.texto-acento {
+  color: var(--color-naranja-claro);
+}
+
+.navbar-escalada {
+  background-color: var(--color-roca);
+  min-height: 70px;
+}
+
+.navbar-escalada .navbar-brand {
+  font-family: var(--color-titulos);
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.navbar-escalada .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar-escalada .nav-link:hover,
+.navbar-escalada .nav-link.active {
+  color: var(--color-naranja-claro);
+}
+
+.hero {
+  height: 70vh;
+  min-height: 480px;
+  background:
+    url("https://images.unsplash.com/photo-1705890894620-dccaf9533322?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+      center / cover no-repeat;
+  margin-top: -70px;
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn-filtro {
+  background-color: transparent;
+  border: 2px solid var(--color-pino);
+  color: var(--color-pino);
+  font-weight: 700;
+  padding: 0.45rem 1.25rem;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+}
+
+.btn-filtro:hover,
+.btn-filtro.active {
+  background-color: var(--color-pino);
+  color: #fff;
+}
+
+.card-entrada {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(61, 47, 31, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-entrada:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(61, 47, 31, 0.16);
+}
+
+.card-entrada .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-entrada .card-title {
+  color: var(--color-roca);
+  font-weight: 700;
+}
+
+.entrada-completa {
+  display: none;
+}
+
+.entrada-completa p {
+  font-size: 0.95rem;
+  color: var(--color-piedra);
+  margin-bottom: 0.75rem;
+}
+
+.bg-tipos {
+  background-color: var(--color-pino);
+}
+
+.bg-material {
+  background-color: var(--color-naranja);
+}
+
+.bg-seguridad {
+  background-color: #8b2e2e;
+}
+
+.btn-leer-mas {
+  background-color: var(--color-naranja);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease;
+}
+
+.btn-leer-mas:hover {
+  background-color: var(--color-naranja-claro);
+  color: #fff;
+}
+
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-naranja);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 1050;
+  pointer-events: none;
+}
+
+.btn-volver-arriba.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.btn-volver-arriba:hover {
+  background-color: var(--color-naranja-claro);
+}
+
+.footer-escalada {
+  background-color: var(--color-roca);
+}
+
+.link-footer {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-footer:hover {
+  color: var(--color-naranja-claro);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead {
+    font-size: 1.05rem;
+  }
+}
+
+.entrada.entrada-oculta {
+  display: none !important;
+}
